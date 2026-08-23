@@ -3,7 +3,8 @@
 // `photo` URLs (and the bracketed names/roles) once real photos and
 // details are ready — nothing here is real data yet.
 
-const CEO_PHOTO = "/src/assets/ceoone.jpeg";
+import CEO_ONE from "../assets/ceoone.jpeg";
+const CEO_PHOTO = CEO_ONE;
 const STAFF_PHOTO =
   "https://placehold.co/400x500/3B1130/F6EFE7?text=Staff+Photo&font=raleway";
 
@@ -24,10 +25,10 @@ export const STAFF = [
 ];
 
 // Five slots for staff group photos (use absolute paths pointing into /src/assets)
-export const STAFF_GROUP_PHOTOS = [
-  "/src/assets/grouppicture.jpeg",
-  "/src/assets/grouppictures2.jpeg",
-  "/src/assets/grouppictures5.jpeg",
-  "/src/assets/grouppictures6.jpeg",
-  "/src/assets/grouppictures3.jpeg",
-];
+import GP1 from "../assets/grouppicture.jpeg";
+import GP2 from "../assets/grouppictures2.jpeg";
+import GP5 from "../assets/grouppictures5.jpeg";
+import GP6 from "../assets/grouppictures6.jpeg";
+import GP3 from "../assets/grouppictures3.jpeg";
+
+export const STAFF_GROUP_PHOTOS = [GP1, GP2, GP5, GP6, GP3];

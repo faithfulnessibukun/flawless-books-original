@@ -206,15 +206,16 @@ export const MISSION = [
 // into individual covers) — shown as a banner on the Books page. Replace
 // this URL once you have the real photo, or once it's cropped into
 // individual covers for each book's `coverImage` in bookStorage.js.
-export const BOOKS_COLLECTION_IMAGE = "/src/assets/groupbooks.jpeg";
+import GROUPBOOKS from "../assets/groupbooks.jpeg";
+import GROUPOFBOOK2 from "../assets/groupofbook2.jpeg";
+import GROUPOFBOOKS3 from "../assets/groupofbooks3.jpeg";
+import GROUPOFBOOK from "../assets/groupofbook.jpeg";
+
+export const BOOKS_COLLECTION_IMAGE = GROUPBOOKS;
 
 // Three slots for group photos used on the Books page. Replace these
-// paths with your chosen images (or keep the defaults in `src/assets`).
-export const BOOK_GROUP_PHOTOS = [
-  "/src/assets/groupbooks.jpeg",
-  "/src/assets/groupofbooks3.jpeg",
-  "/src/assets/group of book.jpeg",
-];
+// imports with your chosen images (or keep the defaults in `src/assets`).
+export const BOOK_GROUP_PHOTOS = [GROUPOFBOOK2, GROUPOFBOOKS3, GROUPOFBOOK];
 export const BOOK_LEVELS = [
   { label: "Nursery", icon: "seedling" },
   { label: "Primary", icon: "book" },

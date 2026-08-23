@@ -3,14 +3,13 @@
 // Add more entries to either `photos` array as more pictures arrive —
 // each just needs a caption and an image URL.
 
-// Use absolute dev-server paths to ensure the images are served correctly
-const TEACHING_PHOTO_1 = "/src/assets/ceoteachingstudent.jpeg";
-const TEACHING_PHOTO_2 = "/src/assets/ceoteaching.jpeg";
-const TEACHING_PHOTO_3 = "/src/assets/teaching.jpeg";
+import TEACHING_PHOTO_1 from "../assets/ceoteachingstudent.jpeg";
+import TEACHING_PHOTO_2 from "../assets/ceoteaching.jpeg";
+import TEACHING_PHOTO_3 from "../assets/teaching.jpeg";
 
-const COMPETITION_PHOTO_1 = "/src/assets/groupbooks.jpeg";
-const COMPETITION_PHOTO_2 = "/src/assets/competition.jpeg";
-const COMPETITION_PHOTO_3 = "/src/assets/group of book.jpeg";
+import COMPETITION_PHOTO_1 from "../assets/groupbooks.jpeg";
+import COMPETITION_PHOTO_2 from "../assets/competition.jpeg";
+import COMPETITION_PHOTO_3 from "../assets/groupofbook.jpeg";
 
 export const EVENT_CATEGORIES = [
   {

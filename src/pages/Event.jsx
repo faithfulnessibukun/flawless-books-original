@@ -1,6 +1,13 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { EVENT_CATEGORIES } from "../data/eventContent";
+import ceoteachingstudent from "../assets/ceoteachingstudent.jpeg";
+import ceoteaching from "../assets/ceoteaching.jpeg";
+import teaching from "../assets/teaching.jpeg";
+
+import groupbooks from "../assets/groupbooks.jpeg";
+import competition from "../assets/competition.jpeg";
+import groupofbook from "../assets/groupofbook.jpeg";``
 
 function Events() {
   return (

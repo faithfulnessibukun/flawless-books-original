@@ -62,9 +62,7 @@ function Footer() {
 
         <div className="border-t border-[#F6EFE7]/10 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#F6EFE7]/50">
           <span>© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</span>
-          <Link to="/admin" className="hover:text-[#F6EFE7]/80 transition">
-            Admin
-          </Link>
+          {/* Admin removed */}
         </div>
       </div>
     </footer>

@@ -9,8 +9,6 @@ import Team from "./pages/Team";
 import Event from "./pages/Event";
 import TestImage from "./pages/TestImage";
 import Contact from "./pages/Contact";
-import AdminLogin from "./pages/admin/AdminLogin";
-import AdminDashboard from "./pages/admin/AdminDashboard";
 
 function App() {
   return (
@@ -25,8 +23,7 @@ function App() {
         <Route path="/events" element={<Event />} />
         <Route path="/test-image" element={<TestImage />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/admin" element={<AdminLogin />} />
-        <Route path="/admin/books" element={<AdminDashboard />} />
+        {/* Admin removed */}
       </Routes>
     </>
   );
