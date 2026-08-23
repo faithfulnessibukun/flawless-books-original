@@ -7,37 +7,12 @@ import CategoryBrowser from "../components/CategoryBrowser";
 import BenefitsBanner from "../components/BenefitsBanner";
 import NewsletterSignup from "../components/NewsletterSignup";
 import { getBooks } from "../utils/bookStorage";
-import { BOOKS_COLLECTION_IMAGE, BOOK_GROUP_PHOTOS } from "../data/siteContent";
+import { BOOK_GROUP_PHOTOS } from "../data/siteContent";
 import groupbooks from "../assets/groupbooks.jpeg";
-import toast from "react-hot-toast";
+
 function Books() {
   const [books, setBooks] = useState([]);
   const [activeLevel, setActiveLevel] = useState(null);
-  const [localBookPhotos, setLocalBookPhotos] = useState(() =>
-    JSON.parse(localStorage.getItem("BOOK_GROUP_PHOTOS")) || BOOK_GROUP_PHOTOS
-  );
-
-  const handleBookFile = (index, file) => {
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = () => {
-      const next = [...localBookPhotos];
-      next[index] = reader.result;
-      setLocalBookPhotos(next);
-    };
-    reader.readAsDataURL(file);
-  };
-
-  const saveBookPhotos = () => {
-    localStorage.setItem("BOOK_GROUP_PHOTOS", JSON.stringify(localBookPhotos));
-    toast.success("Book group photos saved locally.");
-  };
-
-  const resetBookPhotos = () => {
-    localStorage.removeItem("BOOK_GROUP_PHOTOS");
-    setLocalBookPhotos(BOOK_GROUP_PHOTOS);
-    toast.success("Book group photos reset to defaults.");
-  };
 
   useEffect(() => {
     const load = () => setBooks(getBooks());
@@ -94,28 +69,16 @@ function Books() {
         </div>
       </section>
 
-      {/* Three editable group-photo slots for books (upload saves to localStorage) */}
+      {/* Three group-photo slots for books */}
       <section className="max-w-6xl mx-auto px-5 md:px-8 py-8">
         <h3 className="text-xl font-bold mb-4">Group of Books</h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {localBookPhotos.map((src, i) => (
+          {BOOK_GROUP_PHOTOS.map((src, i) => (
             <div key={i} className="rounded-2xl overflow-hidden border p-1">
               <img src={src} alt={`Group ${i + 1}`} className="w-full h-40 object-cover" />
               <p className="text-xs mt-2 text-center text-[#8A7A85]">Slot {i + 1}</p>
-              <div className="mt-2 px-2">
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={(e) => handleBookFile(i, e.target.files?.[0])}
-                />
-              </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-4 flex gap-2">
-          <button onClick={saveBookPhotos} className="px-3 py-2 rounded bg-[#3B1130] text-white">Save</button>
-          <button onClick={resetBookPhotos} className="px-3 py-2 rounded border">Reset</button>
         </div>
       </section>
 

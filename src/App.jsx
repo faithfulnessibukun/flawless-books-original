@@ -7,7 +7,6 @@ import Services from "./pages/Services";
 import Books from "./pages/Books";
 import Team from "./pages/Team";
 import Event from "./pages/Event";
-import TestImage from "./pages/TestImage";
 import Contact from "./pages/Contact";
 
 function App() {
@@ -21,7 +20,6 @@ function App() {
         <Route path="/books" element={<Books />} />
         <Route path="/team" element={<Team />} />
         <Route path="/events" element={<Event />} />
-        <Route path="/test-image" element={<TestImage />} />
         <Route path="/contact" element={<Contact />} />
         {/* Admin removed */}
       </Routes>
