@@ -135,11 +135,7 @@ export const TIMELINE = [
     description:
       'Officially registered as "Flawless Accent International" on April 4th.',
   },
-  {
-    year: "2017",
-    title: "First office",
-    description: "Acquired our first physical office space that same month.",
-  },
+  
   {
     year: "2022",
     title: "Renamed to Flawless Consulting Firm Ltd",
