@@ -21,7 +21,6 @@ function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/events" element={<Event />} />
         <Route path="/contact" element={<Contact />} />
-        {/* Admin removed */}
       </Routes>
     </>
   );

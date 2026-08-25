@@ -8,7 +8,6 @@ const PLACEHOLDER_COVER =
   "https://placehold.co/400x600/3B1130/F6EFE7?text=Cover+Coming+Soon&font=raleway";
 
 // A handful of starter titles so the Books page isn't empty on first load.
-// These seed once — after that, everything comes from what the admin adds.
 const STARTER_BOOKS = [
   {
     title: "Flawless Phonics — Nursery Edition",

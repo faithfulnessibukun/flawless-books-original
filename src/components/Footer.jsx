@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { BRAND, SOCIALS } from "../data/siteContent";
+import { BRAND } from "../data/siteContent";
+import SocialLinks from "./SocialLinks";
 
 // Four-column footer, mirroring the QuickReads reference structure:
 // brand blurb, Explore, Company, and Stay Connected (contact + socials).
@@ -50,19 +51,15 @@ function Footer() {
               <li>{BRAND.phone}</li>
               <li>{BRAND.email}</li>
             </ul>
-            <ul className="space-y-1.5 text-xs text-[#F6EFE7]/60">
-              {SOCIALS.slice(0, 4).map((social) => (
-                <li key={social.platform}>
-                  {social.platform}: {social.handle}
-                </li>
-              ))}
-            </ul>
+            <SocialLinks layout="icons" />
           </div>
         </div>
 
         <div className="border-t border-[#F6EFE7]/10 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#F6EFE7]/50">
           <span>© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</span>
-          {/* Admin removed */}
+          <span className="hover:text-[#F6EFE7]/80 transition">
+           Made by Domuel Digital Technology
+          </span>
         </div>
       </div>
     </footer>

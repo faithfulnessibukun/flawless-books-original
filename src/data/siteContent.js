@@ -14,19 +14,51 @@ export const BRAND = {
     "flawlessaccent@gmail.com",
     "flawlessaccent@yahoo.com",
   ],
-  phone: "0703 948 1207",
-  telephone: "0903 506 2576",
+  phone: "+234 703 948 1207",
+  telephone: "+234 903 506 2576",
   address: "Plot 11, House 54 Adetola Street, Aguda, Surulere, Lagos.",
 };
 
 export const SOCIALS = [
-  { platform: "YouTube", handle: "flawlessconsultingfirm" },
-  { platform: "Telegram", handle: "Flawless Speaking Community Hub" },
-  { platform: "Instagram", handle: "flawlessconsultingfirmltd" },
-  { platform: "TikTok", handle: "@flawlessconsulting" },
-  { platform: "Twitter", handle: "@flawlessconsul8" },
-  { platform: "Facebook", handle: "Flaw Less" },
-  { platform: "Facebook Page", handle: "Flawless Consulting Firm Ltd." },
+  {
+    platform: "YouTube",
+    handle: "flawlessconsultingfirm",
+    url: "https://www.youtube.com/@flawlessconsultingfirm",
+  },
+  {
+    platform: "Telegram",
+    handle: "Flawless Speaking Community Hub",
+    // "Flawless Speaking Community Hub" is a display name, not a t.me
+    // username — paste the real invite link or @username here.
+    url: "",
+  },
+  {
+    platform: "Instagram",
+    handle: "flawlessconsultingfirmltd",
+    url: "https://www.instagram.com/flawlessconsultingfirmltd",
+  },
+  {
+    platform: "TikTok",
+    handle: "@flawlessconsulting",
+    url: "https://www.tiktok.com/@flawlessconsulting",
+  },
+  {
+    platform: "Twitter",
+    handle: "@flawlessconsul8",
+    url: "https://twitter.com/flawlessconsul8",
+  },
+  {
+    platform: "Facebook",
+    handle: "Flaw Less",
+    // "Flaw Less" is a display name — paste the real facebook.com/... URL.
+    url: "",
+  },
+  {
+    platform: "Facebook Page",
+    handle: "Flawless Consulting Firm Ltd.",
+    // Same here — paste the real facebook.com/... URL for the Page.
+    url: "",
+  },
 ];
 
 // Every service, with a short IPA gloss — this is the recurring design
@@ -135,7 +167,6 @@ export const TIMELINE = [
     description:
       'Officially registered as "Flawless Accent International" on April 4th.',
   },
-  
   {
     year: "2022",
     title: "Renamed to Flawless Consulting Firm Ltd",
@@ -202,16 +233,15 @@ export const MISSION = [
 // into individual covers) — shown as a banner on the Books page. Replace
 // this URL once you have the real photo, or once it's cropped into
 // individual covers for each book's `coverImage` in bookStorage.js.
-import GROUPBOOKS from "../assets/groupbooks.jpeg";
-import GROUPOFBOOK2 from "../assets/groupofbook2.jpeg";
-import GROUPOFBOOKS3 from "../assets/groupofbooks3.jpeg";
-import GROUPOFBOOK from "../assets/groupofbook.jpeg";
+export const BOOKS_COLLECTION_IMAGE =
+  "https://placehold.co/1200x500/3B1130/F6EFE7?text=Books+Collection+Photo&font=raleway";
 
-export const BOOKS_COLLECTION_IMAGE = GROUPBOOKS;
+export const BOOK_GROUP_PHOTOS = [
+  BOOKS_COLLECTION_IMAGE,
+  BOOKS_COLLECTION_IMAGE,
+  BOOKS_COLLECTION_IMAGE,
+];
 
-// Three slots for group photos used on the Books page. Replace these
-// imports with your chosen images (or keep the defaults in `src/assets`).
-export const BOOK_GROUP_PHOTOS = [GROUPOFBOOK2, GROUPOFBOOKS3, GROUPOFBOOK];
 export const BOOK_LEVELS = [
   { label: "Nursery", icon: "seedling" },
   { label: "Primary", icon: "book" },
