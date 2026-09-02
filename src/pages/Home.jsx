@@ -10,17 +10,10 @@ import NewsletterSignup from "../components/NewsletterSignup";
 import Reveal from "../components/Reveal";
 import StatsSection from "../components/StatsSection";
 import ClienteleMarquee from "../components/ClienteleMarquee";
-import RotatingText from "../components/RotatingText";
 import ServiceGallery from "../components/ServiceGallery";
-import HeroRotator from "../components/HeroRotator";
 import { BRAND, SERVICES } from "../data/siteContent";
 import { getBooks } from "../utils/bookStorage";
-
-const HERO_PHRASES = [
-  "Accent polishing, public speaking, and communication training built on British-English standards.",
-  "Certified training in phonics, diction, and elocution — for learners of every age.",
-  "Trusted by professionals, schools, and event organisers.",
-];
+import heroBackground from "../assets/grouppictures2.jpeg";
 
 function Home() {
   const [books, setBooks] = useState([]);
@@ -44,19 +37,27 @@ function Home() {
   const featuredBooks = books.slice(0, 4);
 
   return (
-    <div className="bg-[#F7EFF3]">
+    <div className="bg-transparent">
       <Navbar />
 
       {/* Hero — the "stage" the whole brand lives on */}
-      <section className="relative bg-[#3B1130] overflow-hidden">
+      <section
+        className="relative overflow-hidden bg-[#3B1130]"
+        style={{
+          backgroundImage: `linear-gradient(rgba(89, 45, 72, 0.68), rgba(89, 45, 72, 0.78)), url(${heroBackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="absolute inset-0 opacity-40 pointer-events-none">
           <div className="absolute -top-20 left-[10%] w-40 h-[140%] bg-gradient-to-b from-[#D9A441]/30 to-transparent rotate-[8deg] blur-2xl animate-[drift_11s_ease-in-out_infinite]" />
           <div className="absolute -top-20 left-[45%] w-48 h-[140%] bg-gradient-to-b from-[#E8871D]/25 to-transparent rotate-[3deg] blur-2xl animate-[drift_14s_ease-in-out_infinite]" />
           <div className="absolute -top-20 left-[75%] w-40 h-[140%] bg-gradient-to-b from-[#D9A441]/30 to-transparent -rotate-[6deg] blur-2xl animate-[drift_9s_ease-in-out_infinite]" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-5 md:px-8 pt-24 pb-28 grid md:grid-cols-2 gap-12 items-center">
-          <div className="text-center md:text-left">
+        <div className="relative max-w-4xl mx-auto px-5 md:px-8 pt-24 pb-28 text-center">
+          <div>
             <p className="font-mono text-xs tracking-[0.2em] uppercase text-[#D9A441] mb-5">
               {BRAND.ipa}
             </p>
@@ -65,16 +66,15 @@ function Home() {
               className="text-5xl md:text-6xl font-black text-[#F6EFE7] leading-[1.05]"
               style={{ fontFamily: "'Fraunces', serif" }}
             >
-              Speak with{" "}
-              <span className="italic text-[#E8871D]">flawless</span> precision
+              Speak with
+              <span className="block italic text-[#E8871D]">confidence</span>
             </h1>
 
-            <RotatingText
-              phrases={HERO_PHRASES}
-              className="text-[#F6EFE7]/70 text-lg mt-6 max-w-xl mx-auto md:mx-0 leading-relaxed min-h-[3.5rem]"
-            />
+            <p className="text-[#F6EFE7]/80 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
+              British-English communication coaching for schools, professionals, and events.
+            </p>
 
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-6">
+            <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
               <Link
                 to="/services"
                 className="bg-[#E8871D] hover:bg-[#C96F12] active:scale-95 text-[#2A0C22] font-bold px-7 py-3.5 rounded-full transition flex items-center gap-2"
@@ -89,8 +89,6 @@ function Home() {
               </Link>
             </div>
           </div>
-
-          <HeroRotator />
         </div>
       </section>
 

@@ -2,12 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --plum-900: rgb(86, 39, 69);
+  --plum-800: rgb(110, 62, 93);
+  --plum-700: rgb(134, 83, 116);
+  --plum-overlay: rgba(89, 45, 72, 0.72);
+  --ivory: rgb(245, 243, 238);
+  --taupe: rgb(196, 178, 163);
+  --charcoal: rgb(54, 54, 54);
+  --mauve: rgb(128, 64, 96);
+  --terracotta: rgb(168, 80, 48);
+  --olive: rgb(82, 92, 56);
+  --teal: rgb(90, 138, 140);
+  --site-bg: linear-gradient(
+    135deg,
+    rgba(86, 39, 69, 0.9) 0%,
+    rgba(110, 62, 93, 0.8) 30%,
+    rgba(134, 83, 116, 0.78) 58%,
+    rgba(128, 64, 96, 0.7) 80%,
+    rgba(90, 138, 140, 0.62) 100%
+  );
+}
+
 html {
   scroll-behavior: smooth;
+  background: rgb(50, 22, 41);
 }
 
 body {
+  margin: 0;
+  min-height: 100vh;
   font-family: "Public Sans", system-ui, sans-serif;
+  background:
+    linear-gradient(rgba(89, 45, 72, 0.62), rgba(89, 45, 72, 0.62)),
+    var(--site-bg);
+  background-attachment: fixed;
+  color: var(--ivory);
+}
+
+#root {
+  min-height: 100vh;
 }
 
 @keyframes drift {

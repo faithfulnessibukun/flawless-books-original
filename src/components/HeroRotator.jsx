@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { HERO_ROTATOR } from "../data/heroRotatorContent";
+
 
 // Crossfades through HERO_ROTATOR every `interval` ms — a photo with a
 // large word overlaid on top. Sits in the hero's right column on desktop,

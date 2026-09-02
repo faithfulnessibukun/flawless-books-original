@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { BRAND } from "../data/siteContent";
 
 const LINKS = [
   { to: "/", label: "Home" },
@@ -18,21 +17,18 @@ function Navbar() {
 
   const linkClasses = ({ isActive }) =>
     `text-sm font-semibold tracking-wide transition ${
-      isActive ? "text-[#E8871D]" : "text-[#F6EFE7]/80 hover:text-[#F6EFE7]"
-    }`;
+      isActive ? "text-[#F6EFE7]" : "text-[#F6EFE7]/80 hover:text-[#F6EFE7]"
+    } drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]`;
 
   return (
-    <header className="sticky top-0 z-50 bg-[#3B1130]/95 backdrop-blur border-b border-[#F6EFE7]/10">
+    <header className="sticky top-0 z-50 bg-[#3B1130] border-b border-[#F6EFE7]/10 shadow-[0_10px_25px_rgba(59,17,48,0.25)]">
       <div className="max-w-6xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
-        <Link to="/" className="flex flex-col leading-none">
+        <Link to="/" className="flex items-center leading-none">
           <span
-            className="text-2xl font-black text-[#F6EFE7] tracking-tight"
+            className="text-2xl font-black text-[#F6EFE7] tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
             style={{ fontFamily: "'Fraunces', serif" }}
           >
             FLAWLESS
-          </span>
-          <span className="text-[10px] font-mono tracking-[0.15em] text-[#D9A441] mt-1">
-            {BRAND.ipa}
           </span>
         </Link>
 
@@ -46,7 +42,7 @@ function Navbar() {
 
         <button
           onClick={() => setOpen(true)}
-          className="md:hidden text-[#F6EFE7] p-2"
+          className="md:hidden text-[#F6EFE7] p-2 drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]"
           aria-label="Open menu"
         >
           <FaBars size={20} />
@@ -56,16 +52,16 @@ function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="fixed inset-0 z-50 bg-[#3B1130] flex flex-col">
-          <div className="h-20 flex items-center justify-between px-5">
+          <div className="h-20 flex items-center justify-between px-5 border-b border-[#F6EFE7]/10">
             <span
-              className="text-2xl font-black text-[#F6EFE7]"
+              className="text-2xl font-black text-[#F6EFE7] drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
               style={{ fontFamily: "'Fraunces', serif" }}
             >
               FLAWLESS
             </span>
             <button
               onClick={() => setOpen(false)}
-              className="text-[#F6EFE7] p-2"
+              className="text-[#F6EFE7] p-2 drop-shadow-[0_2px_6px_rgba(0,0,0,0.5)]"
               aria-label="Close menu"
             >
               <FaTimes size={20} />
@@ -80,9 +76,9 @@ function Navbar() {
                 onClick={() => setOpen(false)}
                 end={link.to === "/"}
                 className={({ isActive }) =>
-                  `py-4 text-2xl font-bold border-b border-[#F6EFE7]/10 ${
-                    isActive ? "text-[#E8871D]" : "text-[#F6EFE7]"
-                  }`
+                  `py-4 text-2xl font-bold ${
+                    isActive ? "text-[#F6EFE7]" : "text-[#F6EFE7]/80"
+                  } drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]`
                 }
                 style={{ fontFamily: "'Fraunces', serif" }}
               >
