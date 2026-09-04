@@ -8,12 +8,13 @@ import CategoryBrowser from "../components/CategoryBrowser";
 import BenefitsBanner from "../components/BenefitsBanner";
 import NewsletterSignup from "../components/NewsletterSignup";
 import Reveal from "../components/Reveal";
+import RotatingText from "../components/RotatingText";
 import StatsSection from "../components/StatsSection";
 import ClienteleMarquee from "../components/ClienteleMarquee";
 import ServiceGallery from "../components/ServiceGallery";
 import { BRAND, SERVICES } from "../data/siteContent";
 import { getBooks } from "../utils/bookStorage";
-import heroBackground from "../assets/grouppictures2.jpeg";
+import heroBackground from "../assets/backgroundpicture.jpeg";
 
 function Home() {
   const [books, setBooks] = useState([]);
@@ -23,6 +24,25 @@ function Home() {
     load();
     window.addEventListener("booksUpdated", load);
     return () => window.removeEventListener("booksUpdated", load);
+  }, []);
+
+  useEffect(() => {
+    let raf = null;
+
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        const offset = Math.min(Math.max(window.scrollY * 0.18, 0), 200);
+        setBgOffset(offset);
+        raf = null;
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   const counts = useMemo(() => {
@@ -35,6 +55,7 @@ function Home() {
   }, [books]);
 
   const featuredBooks = books.slice(0, 4);
+  const [bgOffset, setBgOffset] = useState(0);
 
   return (
     <div className="bg-transparent">
@@ -46,7 +67,7 @@ function Home() {
         style={{
           backgroundImage: `linear-gradient(rgba(89, 45, 72, 0.68), rgba(89, 45, 72, 0.78)), url(${heroBackground})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: `center calc(15% + ${bgOffset}px)`,
           backgroundRepeat: "no-repeat",
         }}
       >
@@ -67,8 +88,13 @@ function Home() {
               style={{ fontFamily: "'Fraunces', serif" }}
             >
               Speak with
-              <span className="block italic text-[#E8871D]">confidence</span>
             </h1>
+
+            <RotatingText
+              phrases={["confidence", "clarity", "precision", "eloquence"]}
+              interval={3200}
+              className="block italic text-[#E8871D] text-5xl md:text-6xl font-black leading-[1.05]"
+            />
 
             <p className="text-[#F6EFE7]/80 text-lg mt-6 max-w-2xl mx-auto leading-relaxed">
               British-English communication coaching for schools, professionals, and events.

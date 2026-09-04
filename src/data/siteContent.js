@@ -16,7 +16,7 @@ export const BRAND = {
   ],
   phone: "+234 703 948 1207",
   telephone: "+234 903 506 2576",
-  address: "Plot 11, House 54 Adetola Street, Aguda, Surulere, Lagos.",
+  address: "Plot 11, House 54 Adetola Street, Aguda, Surulere, Lagos Nigeria.",
 };
 
 export const SOCIALS = [
@@ -274,12 +274,12 @@ export const BENEFITS = [
 ];
 
 export const WORKFLOW = [
-  { letter: "F", word: "Frontline" },
-  { letter: "L", word: "Lovable" },
-  { letter: "A", word: "Aberrant" },
-  { letter: "W", word: "Winsome" },
-  { letter: "L", word: "Lofty" },
-  { letter: "E", word: "Endearing" },
-  { letter: "S", word: "Singular" },
-  { letter: "S", word: "Satisfying" },
+  { letter: "F", word: "Focused on Excellence" },
+  { letter: "L", word: "Loyal in service" },
+  { letter: "A", word: "Accountable in All Things" },
+  { letter: "W", word: "Worthy of Trust" },
+  { letter: "L", word: "Loving in Character" },
+  { letter: "E", word: "Exemplary in Conduct" },
+  { letter: "S", word: "Sincere in Intentions" },
+  { letter: "S", word: "Steadfast in Integrity" },
 ];

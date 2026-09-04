@@ -3,7 +3,7 @@
 // `photo` URLs (and the bracketed names/roles) once real photos and
 // details are ready — nothing here is real data yet.
 
-import CEO_ONE from "../assets/ceoone.jpeg";
+import CEO_ONE from "../assets/ceopicture.jpeg";
 import MANAGING_DIRECTOR_PHOTO from "../assets/Managing director.jpeg";
 import STAFF_PHOTO2 from "../assets/Relation officer.jpeg";
 
@@ -13,7 +13,7 @@ const STAFF_PHOTO3 = MANAGING_DIRECTOR_PHOTO;
 const STAFF_PHOTO4 = STAFF_PHOTO2;
 
 export const CEO = {
-  name: "[CEO Name]",
+  name: "Rosemary Amadi",
   role: "Chief Executive Officer",
   bio: "Leads Flawless Consulting Firm Ltd's mission to deliver flawless British-English communication training across Africa.",
   photo: CEO_PHOTO,

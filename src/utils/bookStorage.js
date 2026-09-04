@@ -32,10 +32,16 @@ import PLACEHOLDER_COVER30 from "../assets/book2.jpeg";
 import PLACEHOLDER_COVER31 from "../assets/book1.jpeg";
 
 const BOOKS_KEY = "books";
+const BOOKS_SEED_VERSION_KEY = "booksSeedVersion";
 
 function writeStarterBooks() {
   const seeded = STARTER_BOOKS.map((book) => ({ ...book, id: generateId() }));
   localStorage.setItem(BOOKS_KEY, JSON.stringify(seeded));
+  try {
+    localStorage.setItem(BOOKS_SEED_VERSION_KEY, computeSeedVersion());
+  } catch {
+    // ignore
+  }
   return seeded;
 }
 
@@ -63,6 +69,19 @@ function resetStaleBooksIfNeeded() {
   }
 }
 
+function computeSeedVersion() {
+  try {
+    const str = JSON.stringify(STARTER_BOOKS);
+    let hash = 5381;
+    for (let i = 0; i < str.length; i++) {
+      hash = (hash * 33) ^ str.charCodeAt(i);
+    }
+    return String(hash >>> 0);
+  } catch {
+    return "";
+  }
+}
+
 // Placeholder cover — swap for real cover art later. Uses the brand's own
 // plum/ivory so even the placeholder doesn't look like a generic stock image.
 const PLACEHOLDER_COVER =
@@ -72,10 +91,10 @@ const PLACEHOLDER_COVER =
 // and leave space for more books as they are added later.
 const STARTER_BOOKS = [
   {
-    title: "Flawless Phonics — Nursery Edition",
+    title: "Flawless Phonics — Primary Edition",
     author: "Flawless Consulting Firm Ltd",
-    level: "Nursery",
-    price: "₦4,500",
+    level: "Primary",
+    price: "₦9000",
     originalPrice: "",
     rating: 5,
     description:
@@ -87,7 +106,7 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics — Primary Edition",
     author: "Flawless Consulting Firm Ltd",
     level: "Primary",
-    price: "₦4,800",
+    price: "₦9000",
     originalPrice: "₦5,500",
     rating: 4,
     description:
@@ -96,10 +115,10 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER2,
   },
   {
-    title: "Flawless Grammar — Primary Edition",
+    title: "Flawless Phonics — Nursery Edition",
     author: "Flawless Consulting Firm Ltd",
-    level: "Primary",
-    price: "₦5,200",
+    level: "Nursery",
+    price: "₦7000",
     originalPrice: "₦6,000",
     rating: 4,
     description:
@@ -108,10 +127,10 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER3,
   },
   {
-    title: "Flawless Diction — Secondary Edition",
+    title: "Flawless Diction — Primary Edition",
     author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦6,000",
+    level: "Primary",
+    price: "₦9000",
     originalPrice: "₦7,000",
     rating: 5,
     description:
@@ -120,10 +139,10 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER4,
   },
   {
-    title: "Flawless Reading for Beginners",
+    title: "Flawless Phonics — Primary Edition",
     author: "Flawless Consulting Firm Ltd",
-    level: "Nursery",
-    price: "₦3,900",
+    level: "Primary",
+    price: "₦9000",
     originalPrice: "",
     rating: 4,
     description:
@@ -131,44 +150,11 @@ const STARTER_BOOKS = [
     amazonUrl: "https://www.amazon.com",
     coverImage: PLACEHOLDER_COVER5,
   },
+  
+
+  
   {
-    title: "Flawless Spoken English — Senior Level",
-    author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦7,200",
-    originalPrice: "₦8,500",
-    rating: 5,
-    description:
-      "Designed for confident speaking, writing, and presentation skills in formal settings.",
-    amazonUrl: "https://www.amazon.com",
-    coverImage: PLACEHOLDER_COVER6,
-  },
-  {
-    title: "Flawless Creative Writing — Secondary Edition",
-    author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦6,800",
-    originalPrice: "₦7,600",
-    rating: 5,
-    description:
-      "Encourages creative expression, story structure, and confident written communication.",
-    amazonUrl: "https://www.amazon.com",
-    coverImage: PLACEHOLDER_COVER7,
-  },
-  {
-    title: "Flawless Business Communication — Senior Level",
-    author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦8,000",
-    originalPrice: "₦9,000",
-    rating: 5,
-    description:
-      "Advanced training for professional communication in business environments.",
-    amazonUrl: "https://www.amazon.com",
-    coverImage: PLACEHOLDER_COVER8,
-  },
-  {
-    title: "Flawless Academic Writing — Senior Level",
+    title: "Flawless Phonics Fun — Senior Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Secondary",
     price: "₦8,500",
@@ -179,23 +165,12 @@ const STARTER_BOOKS = [
     amazonUrl: "https://www.amazon.com",
     coverImage: PLACEHOLDER_COVER9,
   },
+  
   {
-    title: "Flawless Leadership — Senior Level",
+    title: "Flawless Phonics — Senior Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Secondary",
-    price: "₦9,000",
-    originalPrice: "₦10,000",
-    rating: 5,
-    description:
-      "Develops essential leadership skills for managing teams and driving organizational success.",
-    amazonUrl: "https://www.amazon.com",
-    coverImage: PLACEHOLDER_COVER10,
-  },
-  {
-    title: "Flawless Time Management — Senior Level",
-    author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦9,500",
+    price: "₦10,000",
     originalPrice: "₦10,500",
     rating: 5,
     description:
@@ -204,10 +179,10 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER11,
   },
   {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Phonics Fun — Nursery Level",
     author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
+    level: "Nursery",
+    price: "₦7000",
     originalPrice: "₦11,000",
     rating: 5,
     description:
@@ -216,10 +191,10 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER12,
   },
   {
-   title: "Flawless Personal Development — Senior Level",
+   title: "Flawless Phonics — Primary Level",
     author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
+    level: "Primary",
+    price: "₦9000",
     originalPrice: "₦11,000",
     rating: 5,
     description:
@@ -227,23 +202,12 @@ const STARTER_BOOKS = [
     amazonUrl: "https://www.amazon.com",
     coverImage: PLACEHOLDER_COVER13, 
   },
+  
   {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Phonics — Nursery Level",
     author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
-    originalPrice: "₦11,000",
-    rating: 5,
-    description:
-      "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
-    amazonUrl: "https://www.amazon.com",
-    coverImage: PLACEHOLDER_COVER14,
-  },
-  {
-    title: "Flawless Personal Development — Senior Level",
-    author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
+    level: "Nursery",
+    price: "₦9000",
     originalPrice: "₦11,000",
     rating: 5,
     description:
@@ -252,7 +216,7 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER15,
   },
   {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Phonics — Senior Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Secondary",
     price: "₦10,000",
@@ -275,32 +239,10 @@ const STARTER_BOOKS = [
     amazonUrl: "https://www.amazon.com",
     coverImage: PLACEHOLDER_COVER17,
   },
+  
+  
   {
-    title: "Flawless Personal Development — Senior Level",
-    author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
-    originalPrice: "₦11,000",
-    rating: 5,
-    description:
-      "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
-    amazonUrl: "https://www.amazon.com",
-    coverImage: PLACEHOLDER_COVER18,
-  },
-  {
-    title: "Flawless Personal Development — Senior Level",
-    author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
-    originalPrice: "₦11,000",
-    rating: 5,
-    description:
-      "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
-    amazonUrl: "https://www.amazon.com",
-    coverImage: PLACEHOLDER_COVER18,
-  },
-  {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Phoics — Senior Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Secondary",
     price: "₦10,000",
@@ -312,10 +254,10 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER19,
   },
   {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Phonics Fun— Nursery Level",
     author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
+    level: "Nursery",
+    price: "₦7000",
     originalPrice: "₦11,000",
     rating: 5,
     description:
@@ -324,10 +266,10 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER20,
   },
   {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Phonics — Primary Level",
     author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
+    level: "Primary",
+    price: "₦9000",
     originalPrice: "₦11,000",
     rating: 5,
     description:
@@ -336,10 +278,10 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER21,
   },
   {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Phonics — Primary Level",
     author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
+    level: "Primary",
+    price: "₦9000",
     originalPrice: "₦11,000",
     rating: 5,
     description:
@@ -348,7 +290,7 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER22,
   },
   {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Phonics — Senior Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Secondary",
     price: "₦10,000",
@@ -360,7 +302,7 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER23,
   },
   {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Phonics — Senior Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Secondary",
     price: "₦10,000",
@@ -372,10 +314,10 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER24,
   },
   {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Phonics — Primary Level",
     author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
+    level: "Primary",
+    price: "₦9000",
     originalPrice: "₦11,000",
     rating: 5,
     description:
@@ -383,18 +325,7 @@ const STARTER_BOOKS = [
     amazonUrl: "https://www.amazon.com",
     coverImage: PLACEHOLDER_COVER25,
   },
-  {
-    title: "Flawless Personal Development — Senior Level",
-    author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
-    originalPrice: "₦11,000",
-    rating: 5,
-    description:
-      "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
-    amazonUrl: "https://www.amazon.com",
-    coverImage: PLACEHOLDER_COVER26,
-  },
+  
   {
     title: "Flawless Personal Development — Senior Level",
     author: "Flawless Consulting Firm Ltd",
@@ -408,10 +339,10 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER27,
   },
   {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Phonics Fun — Nursery Level",
     author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
+    level: "Nursery",
+    price: "₦7000",
     originalPrice: "₦11,000",
     rating: 5,
     description:
@@ -419,18 +350,7 @@ const STARTER_BOOKS = [
     amazonUrl: "https://www.amazon.com",
     coverImage: PLACEHOLDER_COVER28,
   },
-  {
-    title: "Flawless Personal Development — Senior Level",
-    author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
-    originalPrice: "₦11,000",
-    rating: 5,
-    description:
-      "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
-    amazonUrl: "https://www.amazon.com",
-    coverImage: PLACEHOLDER_COVER29,
-  },
+  
   {
     title: "Flawless Personal Development — Senior Level",
     author: "Flawless Consulting Firm Ltd",
@@ -444,7 +364,7 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER30,
   },
   {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Phonics — Senior Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Secondary",
     price: "₦10,000",
@@ -459,6 +379,17 @@ const STARTER_BOOKS = [
 ];
 
 export function getBooks() {
+  // If the starter data has changed (seed version differs), overwrite persisted books
+  try {
+    const currentVersion = computeSeedVersion();
+    const savedVersion = localStorage.getItem(BOOKS_SEED_VERSION_KEY);
+    if (!savedVersion || savedVersion !== currentVersion) {
+      return writeStarterBooks();
+    }
+  } catch {
+    // fall through to existing persisted data
+  }
+
   resetStaleBooksIfNeeded();
 
   try {
@@ -508,6 +439,11 @@ export function updateBook(id, updates) {
 export function deleteBook(id) {
   const books = getBooks();
   setBooks(books.filter((book) => book.id !== id));
+}
+
+// Dev helper: force reset books to starter set (calls writeStarterBooks)
+export function resetBooksToStarter() {
+  return writeStarterBooks();
 }
 
 export { PLACEHOLDER_COVER, PLACEHOLDER_COVER9, PLACEHOLDER_COVER10, PLACEHOLDER_COVER11, PLACEHOLDER_COVER12, PLACEHOLDER_COVER31 };
