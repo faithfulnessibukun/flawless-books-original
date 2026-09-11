@@ -6,8 +6,8 @@
 import CEO_ONE from "../assets/ceopicture.jpeg";
 import MANAGING_DIRECTOR_PHOTO from "../assets/Managing director.jpeg";
 import STAFF_PHOTO2 from "../assets/Relation officer.jpeg";
-import FACILITATOR_PHOTO from "../assets/Facilitator.jpeg";
-import FACILITATOR1_PHOTO from "../assets/Facilitator1.jpeg";
+import FACILITATOR_PHOTO from "../assets/facilitator.jpeg";
+import FACILITATOR1_PHOTO from "../assets/facilitator1.jpeg";
 
 export const CEO = {
   name: "Rosemary Brown-Amadi",
