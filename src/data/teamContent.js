@@ -6,26 +6,23 @@
 import CEO_ONE from "../assets/ceopicture.jpeg";
 import MANAGING_DIRECTOR_PHOTO from "../assets/Managing director.jpeg";
 import STAFF_PHOTO2 from "../assets/Relation officer.jpeg";
-
-const CEO_PHOTO = CEO_ONE;
-const STAFF_PHOTO = MANAGING_DIRECTOR_PHOTO;
-const STAFF_PHOTO3 = MANAGING_DIRECTOR_PHOTO;
-const STAFF_PHOTO4 = STAFF_PHOTO2;
+import FACILITATOR_PHOTO from "../assets/Facilitator.jpeg";
+import FACILITATOR1_PHOTO from "../assets/Facilitator1.jpeg";
 
 export const CEO = {
-  name: "Rosemary Amadi",
-  role: "Chief Executive Officer",
+  name: "Rosemary Brown-Amadi",
+  role:    "Chief Executive Officer",
   bio: "Leads Flawless Consulting Firm Ltd's mission to deliver flawless British-English communication training across Africa.",
-  photo: CEO_PHOTO,
+  photo: CEO_ONE,
 };
 
 // Add or remove staff members here — each just needs a name, role, and
 // photo. Duplicate one of these objects for every real team member.
 export const STAFF = [
-  { name: "Miss Immaculatta Amadi", role: "Managing Director", photo: STAFF_PHOTO },
+  { name: "Miss Immaculatta Amadi", role: "Managing Director", photo: MANAGING_DIRECTOR_PHOTO },
   { name: "Miss Juliet Ogbemudia", role: "PA/Customer Relations Officer.", photo: STAFF_PHOTO2 },
-  { name: "[Staff Name]", role: "[Role]", photo: STAFF_PHOTO3 },
-  { name: "[Staff Name]", role: "[Role]", photo: STAFF_PHOTO4 },
+  { name: "Catherine Ogbuehi", role: "Facilitator", photo: FACILITATOR_PHOTO },
+  { name: "Uche Obioma Uzoetue", role: "Facilitator", photo: FACILITATOR1_PHOTO },
 ];
 
 // Five slots for staff group photos (use absolute paths pointing into /src/assets)

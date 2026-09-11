@@ -41,6 +41,7 @@ function ServiceGallery({ interval = 4500 }) {
         <img
           src={slide.image}
           alt={slide.caption}
+          style={{ objectPosition: slide.focalPoint || "center" }}
           className={`w-full h-full object-cover transition-opacity duration-300 ${
             visible ? "opacity-100" : "opacity-0"
           }`}
@@ -64,7 +65,7 @@ function ServiceGallery({ interval = 4500 }) {
       <div className="absolute bottom-4 right-4 md:bottom-6 md:right-8 flex gap-2">
         {SERVICE_GALLERY.map((item, i) => (
           <button
-            key={item.service}
+            key={item.id}
             onClick={() => goTo(i)}
             aria-label={`Show ${item.caption}`}
             className={`h-2 rounded-full transition-all ${

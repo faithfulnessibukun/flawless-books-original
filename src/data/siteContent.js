@@ -15,7 +15,7 @@ export const BRAND = {
     "flawlessaccent@yahoo.com",
   ],
   phone: "+234 703 948 1207",
-  telephone: "+234 903 506 2576",
+  telephone: "+234 806 822 0862",
   address: "Plot 11, House 54 Adetola Street, Aguda, Surulere, Lagos Nigeria.",
 };
 
@@ -30,7 +30,7 @@ export const SOCIALS = [
     handle: "Flawless Speaking Community Hub",
     // "Flawless Speaking Community Hub" is a display name, not a t.me
     // username — paste the real invite link or @username here.
-    url: "",
+    url: "https://t.me/flawlessconsultingfirmltd",
   },
   {
     platform: "Instagram",
@@ -47,17 +47,12 @@ export const SOCIALS = [
     handle: "@flawlessconsul8",
     url: "https://twitter.com/flawlessconsul8",
   },
-  {
-    platform: "Facebook",
-    handle: "Flaw Less",
-    // "Flaw Less" is a display name — paste the real facebook.com/... URL.
-    url: "",
-  },
+
   {
     platform: "Facebook Page",
     handle: "Flawless Consulting Firm Ltd.",
     // Same here — paste the real facebook.com/... URL for the Page.
-    url: "",
+    url: "@flawless consulting firm ltd",
   },
 ];
 
@@ -208,6 +203,29 @@ export const ACHIEVEMENTS = [
     description:
       "The Flawless Read Pro Bee Competition reached audiences on major TV networks.",
   },
+];
+
+// Used on the About page, right after the header — condensed from the
+// firm's executive summary/background so it reads as a natural page
+// section rather than a document excerpt. The "Executive Summary" /
+// "Background" / "Problem Statement" headings from the source document
+// were dropped; this is framed simply as "Overview" to match the rest
+// of the page's tone.
+export const OVERVIEW = {
+  intro:
+    "Nigeria's educational and professional sectors continue to face challenges around effective spoken English — mother-tongue interference, pronunciation difficulties, limited phonetic awareness, and inadequate exposure to standard English speech patterns.",
+  approach:
+    "Flawless Consulting Firm Ltd addresses these challenges through structured, practical training in Phonics, Diction, Elocution, Public Speaking, Voice Development, and Accent Polishing — combining sound linguistic principles with classroom instruction, practical exercises, continuous assessment, mentorship, and follow-up, to produce measurable improvement for every client.",
+};
+
+export const OBJECTIVES = [
+  "Improve spoken English proficiency through effective Phonics, Diction and Elocution training.",
+  "Reduce the impact of mother-tongue interference on English pronunciation.",
+  "Develop clear articulation, proper pronunciation, fluency and effective speech patterns.",
+  "Build confidence in public speaking and professional communication.",
+  "Equip educators with effective phonics and communication-training techniques.",
+  "Provide individuals and organizations with practical communication solutions tailored to their needs.",
+  "Promote continuous learning through mentorship, assessment and follow-up programmes.",
 ];
 
 export const VISION =

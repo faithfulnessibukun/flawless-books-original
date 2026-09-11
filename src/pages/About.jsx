@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import {
+  OVERVIEW,
+  OBJECTIVES,
   TIMELINE,
   VISION,
   MISSION,
@@ -40,6 +42,46 @@ function About() {
         </div>
       </section>
 
+      {/* Overview + Objectives */}
+      <section className="bg-white py-20">
+        <div className="max-w-5xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-12">
+          <div>
+            <SectionLabel ipa="/ˈəʊvəvjuː/">Overview</SectionLabel>
+            <h2
+              className="text-2xl font-black text-[#241B22] mb-4"
+              style={{ fontFamily: "'Fraunces', serif" }}
+            >
+              Why we do this work
+            </h2>
+            <p className="text-[#8A7A85] leading-relaxed">{OVERVIEW.intro}</p>
+            <p className="text-[#8A7A85] leading-relaxed mt-4">
+              {OVERVIEW.approach}
+            </p>
+          </div>
+
+          <div>
+            <SectionLabel ipa="/ˌɒbdʒɛkˈtɪvz/">Objectives</SectionLabel>
+            <h2
+              className="text-2xl font-black text-[#241B22] mb-4"
+              style={{ fontFamily: "'Fraunces', serif" }}
+            >
+              What we set out to do
+            </h2>
+            <ul className="space-y-3">
+              {OBJECTIVES.map((item) => (
+                <li
+                  key={item}
+                  className="flex gap-3 text-[#8A7A85] leading-relaxed text-sm"
+                >
+                  <span className="text-[#E8871D] font-bold shrink-0">—</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Timeline — a real sequence, so numbering/dates carry information */}
       <section className="max-w-3xl mx-auto px-5 md:px-8 py-20">
         <div className="relative pl-8">
@@ -68,7 +110,7 @@ function About() {
       </section>
 
       {/* Vision + Mission */}
-      <section className="bg-white py-20">
+      <section className="bg-[#F7EFF3] py-20">
         <div className="max-w-5xl mx-auto px-5 md:px-8 grid md:grid-cols-2 gap-12">
           <div>
             <SectionLabel ipa="/ˈvɪʒən/">Vision</SectionLabel>

@@ -42,7 +42,7 @@ function Team() {
             >
               {CEO.name}
             </h2>
-            <p className="font-bold text-[#E8871D] mt-1">{CEO.role}</p>
+              <p className="font-bold text-[#E8871D] mt-1 text-left w-full transform translate-x-10">{CEO.role}</p>
             <p className="text-[#8A7A85] mt-4 leading-relaxed">{CEO.bio}</p>
           </div>
         </div>
