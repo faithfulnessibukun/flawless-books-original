@@ -1,8 +1,9 @@
-import { FaSeedling, FaBook, FaGraduationCap, FaBrain } from "react-icons/fa";
+import { FaSeedling, FaPuzzlePiece, FaBook, FaGraduationCap, FaBrain } from "react-icons/fa";
 import { BOOK_LEVELS } from "../data/siteContent";
 
 const ICONS = {
   seedling: FaSeedling,
+  puzzle: FaPuzzlePiece,
   book: FaBook,
   graduation: FaGraduationCap,
   brain: FaBrain,
@@ -12,7 +13,7 @@ const ICONS = {
 // `activeLevel` highlights the one currently selected (or null for "All").
 function CategoryBrowser({ counts = {}, activeLevel, onSelect }) {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
       {BOOK_LEVELS.map((cat) => {
         const Icon = ICONS[cat.icon] || FaBook;
         const isActive = activeLevel === cat.label;

@@ -262,6 +262,7 @@ export const BOOK_GROUP_PHOTOS = [
 
 export const BOOK_LEVELS = [
   { label: "Nursery", icon: "seedling" },
+  { label: "Kindergarten", icon: "puzzle" },
   { label: "Primary", icon: "book" },
   { label: "Secondary", icon: "graduation" },
   { label: "Personal Development", icon: "brain" },

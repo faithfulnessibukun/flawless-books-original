@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import StaffGroupGallery from "../components/StaffGroupGallery";
 import { CEO, STAFF, STAFF_GROUP_PHOTOS } from "../data/teamContent";
 
 function Team() {
@@ -51,17 +52,6 @@ function Team() {
       {/* Staff grid */}
       <section className="bg-white py-20">
         <div className="max-w-6xl mx-auto px-5 md:px-8">
-          <div className="mb-12">
-            <h3 className="text-xl font-bold mb-4">Staff Group Photos</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-5 gap-4">
-              {STAFF_GROUP_PHOTOS.map((src, i) => (
-                <div key={i} className="rounded-2xl overflow-hidden border p-1">
-                  <img src={src} alt={`Staff group ${i + 1}`} className="w-full h-28 object-cover" />
-                  <p className="text-xs mt-1 text-center text-[#8A7A85]">Slot {i + 1}</p>
-                </div>
-              ))}
-            </div>
-          </div>
           <div className="text-center mb-12">
             <p className="font-mono text-xs tracking-[0.15em] uppercase text-[#D9A441] mb-2">
               /stæf/ Our People
@@ -82,6 +72,7 @@ function Team() {
                   <img
                     src={member.photo}
                     alt={member.name}
+                    style={{ objectPosition: member.focalPoint || "center" }}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -94,6 +85,19 @@ function Team() {
                 <p className="text-xs text-[#8A7A85] mt-0.5">{member.role}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-16">
+            <div className="text-center mb-6">
+              <h3
+                className="text-2xl md:text-3xl font-black text-[#241B22] inline-block relative"
+                style={{ fontFamily: "'Fraunces', serif" }}
+              >
+                Staff Group Photos
+                <span className="block w-14 h-1 bg-[#E8871D] rounded-full mx-auto mt-3" />
+              </h3>
+            </div>
+            <StaffGroupGallery photos={STAFF_GROUP_PHOTOS} interval={4000} />
           </div>
         </div>
       </section>

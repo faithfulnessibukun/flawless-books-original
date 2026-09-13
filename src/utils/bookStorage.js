@@ -94,7 +94,7 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics — Primary Edition",
     author: "Flawless Consulting Firm Ltd",
     level: "Primary",
-    price: "₦9000",
+    price: "₦9,000.00",
     originalPrice: "",
     rating: 5,
     description:
@@ -106,8 +106,8 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics — Primary Edition",
     author: "Flawless Consulting Firm Ltd",
     level: "Primary",
-    price: "₦9000",
-    originalPrice: "₦5,500",
+    price: "₦9,000.00",
+    originalPrice: "",
     rating: 4,
     description:
       "Builds on nursery phonics with structured diction and elocution practice.",
@@ -118,8 +118,8 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics — Nursery Edition",
     author: "Flawless Consulting Firm Ltd",
     level: "Nursery",
-    price: "₦7000",
-    originalPrice: "₦6,000",
+    price: "₦7,000.00",
+    originalPrice: "",
     rating: 4,
     description:
       "A clear, confidence-building guide to reading, writing, and correct sentence structure.",
@@ -130,8 +130,8 @@ const STARTER_BOOKS = [
     title: "Flawless Diction — Primary Edition",
     author: "Flawless Consulting Firm Ltd",
     level: "Primary",
-    price: "₦9000",
-    originalPrice: "₦7,000",
+    price: "₦9,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Helps secondary learners improve pronunciation, clarity, and articulation in British English.",
@@ -142,7 +142,7 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics — Primary Edition",
     author: "Flawless Consulting Firm Ltd",
     level: "Primary",
-    price: "₦9000",
+    price: "₦9,000.00",
     originalPrice: "",
     rating: 4,
     description:
@@ -150,28 +150,28 @@ const STARTER_BOOKS = [
     amazonUrl: "https://www.amazon.com",
     coverImage: PLACEHOLDER_COVER5,
   },
-  
 
-  
+
+
   {
-    title: "Flawless Phonics Fun — Senior Level",
+    title: "Flawless Phonics Fun — kindergarten Level",
     author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦8,500",
-    originalPrice: "₦9,500",
+    level: "Kindergarten",
+    price: "₦7,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to structuring essays, citing sources, and developing academic voice.",
     amazonUrl: "https://www.amazon.com",
     coverImage: PLACEHOLDER_COVER9,
   },
-  
+
   {
     title: "Flawless Phonics — Senior Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Secondary",
-    price: "₦10,000",
-    originalPrice: "₦10,500",
+    price: "₦10,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Teaches effective strategies for prioritizing tasks, setting goals, and maximizing productivity.",
@@ -182,8 +182,8 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics Fun — Nursery Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Nursery",
-    price: "₦7000",
-    originalPrice: "₦11,000",
+    price: "₦7,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
@@ -194,21 +194,21 @@ const STARTER_BOOKS = [
    title: "Flawless Phonics — Primary Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Primary",
-    price: "₦9000",
-    originalPrice: "₦11,000",
+    price: "₦9,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
     amazonUrl: "https://www.amazon.com",
-    coverImage: PLACEHOLDER_COVER13, 
+    coverImage: PLACEHOLDER_COVER13,
   },
-  
+
   {
     title: "Flawless Phonics — Nursery Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Nursery",
-    price: "₦9000",
-    originalPrice: "₦11,000",
+    price: "₦7000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
@@ -219,8 +219,8 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics — Senior Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Secondary",
-    price: "₦10,000",
-    originalPrice: "₦11,000",
+    price: "₦10,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
@@ -228,25 +228,25 @@ const STARTER_BOOKS = [
     coverImage: PLACEHOLDER_COVER16,
   },
   {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Phonics Fun — Kindergarten Level",
     author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
-    originalPrice: "₦11,000",
+    level: "Kindergarten",
+    price: "₦7,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
     amazonUrl: "https://www.amazon.com",
     coverImage: PLACEHOLDER_COVER17,
   },
-  
-  
+
+
   {
     title: "Flawless Phoics — Senior Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Secondary",
-    price: "₦10,000",
-    originalPrice: "₦11,000",
+    price: "₦10,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
@@ -269,8 +269,8 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics — Primary Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Primary",
-    price: "₦9000",
-    originalPrice: "₦11,000",
+    price: "₦9,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
@@ -281,8 +281,8 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics — Primary Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Primary",
-    price: "₦9000",
-    originalPrice: "₦11,000",
+    price: "₦9,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
@@ -293,8 +293,8 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics — Senior Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Secondary",
-    price: "₦10,000",
-    originalPrice: "₦11,000",
+    price: "₦10,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
@@ -305,8 +305,8 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics — Senior Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Secondary",
-    price: "₦10,000",
-    originalPrice: "₦11,000",
+    price: "₦10,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
@@ -317,21 +317,21 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics — Primary Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Primary",
-    price: "₦9000",
-    originalPrice: "₦11,000",
+    price: "₦9,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
     amazonUrl: "https://www.amazon.com",
     coverImage: PLACEHOLDER_COVER25,
   },
-  
+
   {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Diction ",
     author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
-    originalPrice: "₦11,000",
+    level: "Personal Development",
+    price: "₦8,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
@@ -342,21 +342,21 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics Fun — Nursery Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Nursery",
-    price: "₦7000",
-    originalPrice: "₦11,000",
+    price: "₦7000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
     amazonUrl: "https://www.amazon.com",
     coverImage: PLACEHOLDER_COVER28,
   },
-  
+
   {
-    title: "Flawless Personal Development — Senior Level",
+    title: "Flawless Note Book  ",
     author: "Flawless Consulting Firm Ltd",
-    level: "Secondary",
-    price: "₦10,000",
-    originalPrice: "₦11,000",
+    level: "Personal Development",
+    price: "₦10,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
@@ -367,8 +367,8 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics — Senior Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Secondary",
-    price: "₦10,000",
-    originalPrice: "₦11,000",
+    price: "₦10,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",

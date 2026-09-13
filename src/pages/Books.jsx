@@ -7,7 +7,6 @@ import CategoryBrowser from "../components/CategoryBrowser";
 import BenefitsBanner from "../components/BenefitsBanner";
 import NewsletterSignup from "../components/NewsletterSignup";
 import { getBooks } from "../utils/bookStorage";
-import { BOOK_GROUP_PHOTOS } from "../data/siteContent";
 import groupbooks from "../assets/groupbooks.jpeg";
 
 function Books() {
@@ -66,19 +65,6 @@ function Books() {
             alt="Our published titles"
             className="w-full h-auto object-cover"
           />
-        </div>
-      </section>
-
-      {/* Three group-photo slots for books */}
-      <section className="max-w-6xl mx-auto px-5 md:px-8 py-8">
-        <h3 className="text-xl font-bold mb-4">Group of Books</h3>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {BOOK_GROUP_PHOTOS.map((src, i) => (
-            <div key={i} className="rounded-2xl overflow-hidden border p-1">
-              <img src={src} alt={`Group ${i + 1}`} className="w-full h-40 object-cover" />
-              <p className="text-xs mt-2 text-center text-[#8A7A85]">Slot {i + 1}</p>
-            </div>
-          ))}
         </div>
       </section>
 

@@ -27,7 +27,8 @@ import spellingBee from "../assets/spellingbee.jpeg";
 import facilitationEssentials from "../assets/facilitationessentialstraining.jpeg";
 import womenLeadConference2 from "../assets/womenleadconference2.jpeg";
 import publicSpeakingTraining from "../assets/trainingonpublicspeaking.jpeg";
-
+import teachingchildren from "../assets/teachingchildren.jpeg";
+import teachingsecondary from "../assets/teachingsecondary.jpeg";
 const shot = (label) =>
   `https://placehold.co/1000x650/3B1130/F6EFE7?text=${encodeURIComponent(
     label
@@ -68,6 +69,18 @@ export const SERVICE_GALLERY = [
     caption: "Training on Public Speaking — Speak with Confidence. Inspire with Impact.",
     image: publicSpeakingTraining,
   },
+  {
+  id:"teachingchildren",
+  service: "Phonics, Diction & Elocution",
+  caption: "The Purpose of Education Is to Replace an Empty Mind With an Open One",
+  image: teachingchildren,
+  },
+ {
+  id:"teachingsecondary",
+  service: "Phonics, Diction & Elocution",
+  caption: "The Function of Education Is to Teach One to Think Intensively and to Think Critically",
+  image: teachingsecondary,
+ },
 
   // Keep any services you don't have photos for yet using shot():
   // {
