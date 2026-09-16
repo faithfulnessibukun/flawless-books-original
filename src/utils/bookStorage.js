@@ -207,7 +207,7 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics — Nursery Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Nursery",
-    price: "₦7000.00",
+    price: "₦7,000.00",
     originalPrice: "",
     rating: 5,
     description:
@@ -242,7 +242,7 @@ const STARTER_BOOKS = [
 
 
   {
-    title: "Flawless Phoics — Senior Level",
+    title: "Flawless Phonics — Senior Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Secondary",
     price: "₦10,000.00",
@@ -257,8 +257,8 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics Fun— Nursery Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Nursery",
-    price: "₦7000",
-    originalPrice: "₦11,000",
+    price: "₦7,000.00",
+    originalPrice: "",
     rating: 5,
     description:
       "Comprehensive guide to self-improvement, goal-setting, and achieving personal excellence.",
@@ -342,7 +342,7 @@ const STARTER_BOOKS = [
     title: "Flawless Phonics Fun — Nursery Level",
     author: "Flawless Consulting Firm Ltd",
     level: "Nursery",
-    price: "₦7000.00",
+    price: "₦7,000.00",
     originalPrice: "",
     rating: 5,
     description:
