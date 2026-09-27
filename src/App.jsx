@@ -6,7 +6,6 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Books from "./pages/Books";
 import Team from "./pages/Team";
-import Event from "./pages/Event";
 import Contact from "./pages/Contact";
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/books" element={<Books />} />
         <Route path="/team" element={<Team />} />
-        <Route path="/events" element={<Event />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
